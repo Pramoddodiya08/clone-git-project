@@ -1,23 +1,26 @@
-<section>
+<div class="container border border-info bg-">
       <h1>Git-Clone</h1>
       <hr>
       <section id="changeBox" class="text-center">
             <div>
               <label for="FileName">FileName : </label>
-              <input type="text">
+              <input type="text" #file>
             </div>
             <div>
               <label for="">Message :</label>
-              <input type="text">
+              <input type="text" #msg>
             </div>
             <div>
-                <button class="btn btn-danger">Save Changes</button>
+                <button class="btn btn-info" (click)="UpdateFiles(file.value,msg.value)">Save Changes</button>
             </div>
             <hr>
       </section>
 
-      
-      <app-wrapper>
+      <ng-template #list let-u="data">
+          <app-list [item]="u"></app-list>
+      </ng-template>
+
+      <app-wrapper [listTemplate]="list" [newUpdate]="update">
         <small>NgStudio</small>
       </app-wrapper>
-</section>
+    </div>

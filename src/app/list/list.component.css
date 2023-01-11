@@ -1,0 +1,7 @@
+
+section{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 4px;
+}

@@ -1,6 +1,21 @@
-section>div{
+.fdiv{
     margin: 10px;
-    background-color: rgb(249, 231, 210);
-    border: 1px solid orange;
+    background-color: azure;
+    border: 1px solid rgb(5, 218, 255);
     padding: 20px;
+}
+#container{
+    background-color:azure;
+    border: 1px solid rgb(5, 218, 255);
+    margin: 10px;
+    padding: 20px;
+}
+h4{
+    margin: 10px;
+}
+.divsectiom{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 4px;
 }

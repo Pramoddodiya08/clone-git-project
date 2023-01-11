@@ -1,5 +1,17 @@
 <section>
     <h4>Repository Name : <ng-content></ng-content></h4>
-
-    <div></div>
+    <div *ngIf="newUpdate.name" class="fdiv">
+       <p>Currently Updated file :{{newUpdate.name}} </p> 
+    </div>
+    <section id="container" *ngIf="newUpdate.history">
+        <section class="divsectiom">
+            <div><h4>Icons</h4> </div>
+            <div><h4>FileName</h4></div>
+            <div><h4>Message</h4></div>
+            <div><h4>Update time</h4></div>
+        </section> 
+        <ng-container *ngFor="let update of newUpdate.history">
+            <ng-container *ngTemplateOutlet="listTemplate; context:{data:update}"></ng-container>
+        </ng-container>
+    </section>
 </section>
